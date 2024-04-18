@@ -29,6 +29,10 @@ def count_not_necessary(row):
         return 1
     return total
 
+'''
+Takes in one row of a dataframe, and returns the number of unique common
+words that exist in all three columns specified, excluding the stop_words.
+'''
 def count_similar_words(row, c1, c2, c3, stop_words):
     if pd.isna(row[c1]) or pd.isna(row[c2]) or pd.isna(row[c3]):
         return 0
